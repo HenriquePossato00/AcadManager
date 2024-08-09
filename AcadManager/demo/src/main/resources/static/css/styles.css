@@ -1,21 +1,112 @@
 body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #414040;
+    /* display: grid;
+    /* grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 3fr, 1fr, 1fr, 1fr;
+    grid-template-areas:
+        "titulo" "titulo"
+        "." "."
+        "form" "form"
+        "form" "form";
+    height: 100vh; */ 
 }
+
+.container {
+    padding: 1em;
+    grid-area: "titulo";
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 1rem;
+    color: #959595;
+    width: 400px;
+    height: 400px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.usuario {
+    height: 50px;
+    width: 250px;
+    padding: 8px;
+    top: -800px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 20px;
+
+}
+
+.senha {
+    height: 50px;
+    width: 250px;
+    padding: 8px;
+    top: -750px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 20px;
+
+}
+/* .container {
+    display: grid;
+    place-items: center;
+    height: 10vh;
+}
+
 
 h1 {
     color: #007bff;
 }
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+
 }
 
 button:hover {
     background-color: #0056b3;
 }
+
+
+
+.centerLogo {
+    height: 100vh;
+    background-size: contain;
+    width: 50%;
+}
+
+.centerCont {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+} */
