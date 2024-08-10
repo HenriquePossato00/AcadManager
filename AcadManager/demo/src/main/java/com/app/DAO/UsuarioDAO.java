@@ -11,7 +11,7 @@ public class UsuarioDAO {
 
     public boolean criarUsuario(Usuario usuario) {
         boolean userCriado = false;
-        String sql = "INSERT INTO  tb_acadmanger(nome, senha, email, cpf, admin) VALUES(?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO  tb_cadastro(nome, senha, email, cpf, admin) VALUES(?, ?, ?, ?, ?)";
 
         ConnectionFactory factory = new ConnectionFactory();
 
@@ -37,7 +37,7 @@ public class UsuarioDAO {
 
     public void deletarUsuario() {
         // 1: Definir o comando SQL
-        String sql = "DELETE FROM tb_acadmanager WHERE id = ?";
+        String sql = "DELETE FROM tb_cadastro WHERE id = ?";
         // 2: Abrir uma conexão
         ConnectionFactory factory = new ConnectionFactory();
         try (Connection c = factory.obtemConexao()) {
@@ -56,7 +56,7 @@ public class UsuarioDAO {
         Usuario usuario = null;
 
         // 1: Definir o comando SQL
-        String sql = "SELECT * FROM tb_acadmanager WHERE nome = ? and senha = ?";
+        String sql = "SELECT * FROM tb_cadastro WHERE nome = ? and senha = ?";
 
         // 2: Abrir uma conexão
         ConnectionFactory factory = new ConnectionFactory();
@@ -89,7 +89,7 @@ public class UsuarioDAO {
         Usuario usuario = null;
 
         // 1: Definir o comando SQL
-        String sql = "SELECT * FROM tb_acadmanager WHERE id = ?";
+        String sql = "SELECT * FROM tb_cadastro WHERE id = ?";
 
         // 2: Abrir uma conexão
         ConnectionFactory factory = new ConnectionFactory();
@@ -120,7 +120,7 @@ public class UsuarioDAO {
     public void atualizarUsuario() {
         Usuario usuario = new Usuario();
         // 1: Definir o comando SQL
-        String sql = "UPDATE tb_acadmanager SET nome = ?, senha = ?, email = ?, cpf = ?, admin = ? WHERE codigo = ?";
+        String sql = "UPDATE tb_cadastro SET nome = ?, senha = ?, email = ?, cpf = ?, admin = ? WHERE codigo = ?";
         // 2: Abrir uma conexão
         ConnectionFactory factory = new ConnectionFactory();
         try (Connection c = factory.obtemConexao()) {

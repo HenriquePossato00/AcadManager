@@ -16,14 +16,14 @@ public class MyController {
         return "index";
     }
 
-    @PostMapping("/buttonAction")
-    public String buttonAction(@RequestParam(name = "param", required = false, defaultValue = "default") String param) {
-        // TODO: process POST request
+    // @PostMapping("/buttonAction")
+    // public String buttonAction(@RequestParam(name = "param", required = false, defaultValue = "default") String param) {
+    //     // TODO: process POST request
 
-        return "result";
-    }
+    //     return login(param, param, null);
+    // }
 
-    @PostMapping("/login")
+    @PostMapping("/loginForm")
     public String login(@RequestParam("nome") String nome,
             @RequestParam("senha") String senha,
             Model model) {
@@ -34,7 +34,7 @@ public class MyController {
             return "result";
         } else {
             model.addAttribute("error", "Usuário ou senha inválidos");
-            return "login";
+            return "index";
         }
     }
 
